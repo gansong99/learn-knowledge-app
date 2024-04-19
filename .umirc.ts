@@ -7,7 +7,7 @@ export default defineConfig({
   initialState: {},
   request: {},
   layout: {
-    title: '@umijs/max',
+    title: 'AI 模拟练习',
   },
   routes: [
     {
@@ -20,14 +20,24 @@ export default defineConfig({
       component: './Home',
     },
     {
-      name: '权限演示',
-      path: '/access',
-      component: './Access',
+      name: '我的勋章',
+      path: '/medal',
+      component: './Medal',
     },
     {
-      name: ' CRUD 示例',
-      path: '/table',
-      component: './Table',
+      name: '我的收藏',
+      path: '/collection',
+      component: './Collection',
+    },
+    {
+      name: '我的足迹',
+      path: '/trace',
+      component: './Trace',
+    },
+    {
+      name: '我的上传',
+      path: '/upload',
+      component: './Upload',
     },
   ],
   npmClient: 'yarn',
