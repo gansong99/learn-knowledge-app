@@ -1,16 +1,24 @@
-import Guide from '@/components/Guide';
-import { trim } from '@/utils/format';
 import { PageContainer } from '@ant-design/pro-components';
-import { useModel } from '@umijs/max';
+import { Col, Row } from 'antd';
+import Answer from './components/Answer';
+import TopicList from './components/TopicList';
 import styles from './index.less';
 
 const HomePage: React.FC = () => {
-  const { name } = useModel('global');
   return (
-    <PageContainer ghost>
-      <div className={styles.container}>
-        <Guide name={trim(name)} />
-      </div>
+    <PageContainer
+      header={{
+        title: '',
+      }}
+    >
+      <Row className={styles.container}>
+        <Col span={10}>
+          <Answer />
+        </Col>
+        <Col span={14}>
+          <TopicList />
+        </Col>
+      </Row>
     </PageContainer>
   );
 };
